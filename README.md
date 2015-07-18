@@ -17,7 +17,7 @@ Swift-Font-Awesome is an [Font Awesome](http://fontawesome.io/) implementation w
 
 ## Snapshots
 <p align="center">
-  <img width="275" height="667" src="https://github.com/hoorace/Swift-Font-Awesome/blob/master/snapshots/2015-7-18.png"/>
+  <img width="375" height="667" src="https://github.com/hoorace/Swift-Font-Awesome/blob/master/snapshots/2015-7-18.png"/>
 </p>
 
 
