@@ -1,2 +1,0 @@
-grep "content" font-awesome.css | awk '{sub(/\";/,"}\",",$2);print $2}' | awk '{sub(/f/,"u{f",$0);print $0}' | awk '{{printf"%s ",$0}}' > content.txt
-grep "before" font-awesome.css | awk '{split($0,a,":");print a[1]}' | awk '{print substr($0,2,99)}' | awk '{n=split($0,a,"-");for(i=1;i<=n;i++) {printf "%s%s", toupper(substr(a[i],1,1)),substr(a[i],2)};printf ORS}'| awk '{{printf"%s, ",$0}}' > fa.txt
