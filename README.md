@@ -16,7 +16,9 @@ Swift-Font-Awesome is an [Font Awesome](http://fontawesome.io/) implementation w
 - [x] All extension can with FontAwesome and it's own text
 
 ## Snapshots
-
+<p align="center">
+  <img src="https://github.com/hoorace/Swift-Font-Awesome/blob/master/snapshots/2015-7-18.png"/>
+</p>
 
 
 ## Requirements
