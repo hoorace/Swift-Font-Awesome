@@ -34,6 +34,32 @@ Swift-Font-Awesome is an [Font Awesome](http://fontawesome.io/) implementation w
 
 copy "Source" floder files to you porject.
 
+### CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects.
+
+CocoaPods 0.36.0 adds supports for Swift and embedded frameworks. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+To integrate Swift-Font-Awesome into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+pod 'Swift-Font-Awesome', '~> 1.0.0'
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+
 
 
 ## Usage
