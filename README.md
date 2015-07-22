@@ -77,12 +77,14 @@ like.fa = Fa.Heart
 ### UIFont
 
 ```swift
-let font = UILabel(size: 24)
+let font = UIFont.fa(size: 24)
 ```
 
 ### UIButton
 
 ```swift
+let button  = UIButton(frame: CGRectMake(50, 220, 120, 30))
+......
 button.faTextAlignment = .Left
 button.fa(Fa.Comment, forState: .Normal)
 ```
