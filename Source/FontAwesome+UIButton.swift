@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UIButton: FaProtocol {
-    func fa(fa: Fa, forState state: UIControlState){
+public extension UIButton {
+    public func fa(fa: Fa, forState state: UIControlState){
         FontAwesome.sharedManager.registerFont()
         let fontAwesome = UIFont(name: kFontAwesome, size: self.titleLabel!.font.pointSize)
         titleLabel!.font = fontAwesome!
@@ -31,7 +31,7 @@ extension UIButton: FaProtocol {
         }
     }
     
-    var faTextAlignment: FaTextAlignment? {
+    public var faTextAlignment: FaTextAlignment? {
         get {
             if let _align = align {
                 return _align

@@ -51,7 +51,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'Swift-Font-Awesome', '~> 1.0.0'
+pod 'Swift-Font-Awesome', '~> 1.1.0'
 ```
 
 Then, run the following command:
@@ -68,6 +68,15 @@ $ pod install
 
 ```swift
 let like = UILabel(frame: CGRectMake(150, 70, 100, 25))
+like.faTextAlignment = .Left
+like.text = " Like"
+like.fa = Fa.Heart
+```
+
+### UIFont
+
+```swift
+let font = UILabel(size: 24)
 like.faTextAlignment = .Left
 like.text = " Like"
 like.fa = Fa.Heart

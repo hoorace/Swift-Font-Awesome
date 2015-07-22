@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UIBarButtonItem {
-    var fa: Fa? {
+public extension UIBarButtonItem {
+    public var fa: Fa? {
         get {
             if let txt = self.title {
                 //only support FaTextAlignment.Left
@@ -46,7 +46,7 @@ extension UIBarButtonItem {
         }
     }
     
-    var faTextAlignment: FaTextAlignment? {
+    public var faTextAlignment: FaTextAlignment? {
         get {
             if let _align = align {
                 return _align

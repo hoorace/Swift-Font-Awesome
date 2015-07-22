@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension UIImage {
+public extension UIImage {
     //https://github.com/melvitax/AFImageHelper/blob/master/AF%2BImage%2BHelper/AF%2BImage%2BExtension.swift
-    convenience init?(faCircle: Fa, font: UIFont = FaType.LG.font, color: UIColor = UIColor.whiteColor(), circleFont: UIFont = FaType.X4.font,circleColor: UIColor = UIColor.blackColor(), backgroundColor: UIColor = UIColor.grayColor(), size:CGSize = CGSizeMake(64, 64), offset: CGPoint = CGPoint(x: 0, y: 8), circleOffset: CGPoint = CGPoint(x: 0, y: 0))
+    public convenience init?(faCircle: Fa, font: UIFont = FaType.LG.font, color: UIColor = UIColor.whiteColor(), circleFont: UIFont = FaType.X4.font,circleColor: UIColor = UIColor.blackColor(), backgroundColor: UIColor = UIColor.grayColor(), size:CGSize = CGSizeMake(64, 64), offset: CGPoint = CGPoint(x: 0, y: 8), circleOffset: CGPoint = CGPoint(x: 0, y: 0))
     {
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let context = UIGraphicsGetCurrentContext()
@@ -31,7 +31,7 @@ extension UIImage {
     }
     
     // MARK: Image with Text
-    convenience init?(fa: Fa, font: UIFont = FaType.LG.font, color: UIColor = UIColor.whiteColor(), backgroundColor: UIColor = UIColor.grayColor(), size:CGSize = CGSizeMake(64, 64), offset: CGPoint = CGPoint(x: 0, y: 0))
+    public convenience init?(fa: Fa, font: UIFont = FaType.LG.font, color: UIColor = UIColor.whiteColor(), backgroundColor: UIColor = UIColor.grayColor(), size:CGSize = CGSizeMake(64, 64), offset: CGPoint = CGPoint(x: 0, y: 0))
     {
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let context = UIGraphicsGetCurrentContext()

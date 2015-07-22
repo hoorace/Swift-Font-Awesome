@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UILabel: FaProtocol {
-    var fa: Fa? {
+public extension UILabel {
+    public var fa: Fa? {
         get {
             if let txt = text {
                 //only support FaTextAlignment.Left
@@ -24,8 +24,7 @@ extension UILabel: FaProtocol {
         set {
             if let value = newValue {
                 FontAwesome.sharedManager.registerFont()
-                let fontAwesome = UIFont(name: kFontAwesome, size: self.font.pointSize)
-                font = fontAwesome!
+                font = UIFont.fa(size: self.font.pointSize)
                 if let txt = text {
                     if let align = faTextAlignment {
                         switch align {
@@ -46,7 +45,7 @@ extension UILabel: FaProtocol {
         }
     }
     
-    var faTextAlignment: FaTextAlignment? {
+    public var faTextAlignment: FaTextAlignment? {
         get {
             if let _align = align {
                 return _align

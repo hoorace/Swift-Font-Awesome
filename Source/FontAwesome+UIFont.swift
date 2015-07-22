@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UIFont {
-    func fa(#size: CGFloat) -> UIFont {
+public extension UIFont {
+    public class func fa(#size: CGFloat) -> UIFont {
         FontAwesome.sharedManager.registerFont()
         if let font = UIFont(name: kFontAwesome, size: size) {
             return font
