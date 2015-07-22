@@ -59,7 +59,10 @@ Then, run the following command:
 ```bash
 $ pod install
 ```
-
+And, in your porject , don't forget import like this:
+```swift
+import Swift_Font_Awesome
+```
 
 
 ## Usage

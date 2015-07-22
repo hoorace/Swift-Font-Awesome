@@ -27,7 +27,16 @@ internal class FontAwesome {
     
     func registerFont() {
         dispatch_once(&token) {
-            let fontURL = NSBundle.mainBundle().URLForResource(kFontAwesome, withExtension: "ttf")!
+            let bundle = NSBundle(forClass: FontAwesome.self)
+            var fontURL = NSURL()
+            let identifier = bundle.bundleIdentifier
+            
+            if identifier?.hasPrefix("org.cocoapods") == true {
+                fontURL = bundle.URLForResource(kFontAwesome, withExtension: "ttf", subdirectory: "Swift-Font-Awesome.bundle")!
+            } else {
+                
+                fontURL = NSBundle.mainBundle().URLForResource(kFontAwesome, withExtension: "ttf")!
+            }
             let inData: NSData = NSData(contentsOfURL: fontURL)!
             let provider: CGDataProviderRef = CGDataProviderCreateWithCFData(inData)
             let font: CGFontRef = CGFontCreateWithDataProvider(provider)
@@ -42,7 +51,7 @@ internal class FontAwesome {
 
 
 public enum FaType: Int{
-    var font: UIFont {
+    public var font: UIFont {
         return fontByType(self)
     }
     private func fontByType(type: FaType) -> UIFont {
