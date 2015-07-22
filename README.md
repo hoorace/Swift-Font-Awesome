@@ -77,9 +77,6 @@ like.fa = Fa.Heart
 
 ```swift
 let font = UILabel(size: 24)
-like.faTextAlignment = .Left
-like.text = " Like"
-like.fa = Fa.Heart
 ```
 
 ### UIButton

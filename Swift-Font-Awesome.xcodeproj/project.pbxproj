@@ -19,6 +19,7 @@
 		0E71264F1B5A5D64003E8F02 /* FontAwesome+UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71264C1B5A5D64003E8F02 /* FontAwesome+UIBarButtonItem.swift */; };
 		0E7126501B5A5D64003E8F02 /* FontAwesome+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71264D1B5A5D64003E8F02 /* FontAwesome+UIButton.swift */; };
 		0E7126511B5A5D64003E8F02 /* FontAwesome+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71264E1B5A5D64003E8F02 /* FontAwesome+UIImage.swift */; };
+		0E7126551B5CDA9A003E8F02 /* FontAwesome+UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7126541B5CDA9A003E8F02 /* FontAwesome+UIFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		0E71264C1B5A5D64003E8F02 /* FontAwesome+UIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FontAwesome+UIBarButtonItem.swift"; path = "Source/FontAwesome+UIBarButtonItem.swift"; sourceTree = "<group>"; };
 		0E71264D1B5A5D64003E8F02 /* FontAwesome+UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FontAwesome+UIButton.swift"; path = "Source/FontAwesome+UIButton.swift"; sourceTree = "<group>"; };
 		0E71264E1B5A5D64003E8F02 /* FontAwesome+UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FontAwesome+UIImage.swift"; path = "Source/FontAwesome+UIImage.swift"; sourceTree = "<group>"; };
+		0E7126541B5CDA9A003E8F02 /* FontAwesome+UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FontAwesome+UIFont.swift"; path = "Source/FontAwesome+UIFont.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 		0E71263F1B59373B003E8F02 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				0E7126541B5CDA9A003E8F02 /* FontAwesome+UIFont.swift */,
 				0E71264C1B5A5D64003E8F02 /* FontAwesome+UIBarButtonItem.swift */,
 				0E71264D1B5A5D64003E8F02 /* FontAwesome+UIButton.swift */,
 				0E71264E1B5A5D64003E8F02 /* FontAwesome+UIImage.swift */,
@@ -242,6 +245,7 @@
 				0E7126221B593452003E8F02 /* ViewController.swift in Sources */,
 				0E7126451B59FDE4003E8F02 /* FontAwesome+UILabel.swift in Sources */,
 				0E7126411B5937AC003E8F02 /* FontAwesome.swift in Sources */,
+				0E7126551B5CDA9A003E8F02 /* FontAwesome+UIFont.swift in Sources */,
 				0E7126511B5A5D64003E8F02 /* FontAwesome+UIImage.swift in Sources */,
 				0E7126201B593452003E8F02 /* AppDelegate.swift in Sources */,
 				0E71264F1B5A5D64003E8F02 /* FontAwesome+UIBarButtonItem.swift in Sources */,
