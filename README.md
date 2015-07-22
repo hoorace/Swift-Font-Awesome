@@ -1,8 +1,6 @@
 # Swift-Font-Awesome
 
-[![Git](https://img.shields.io/badge/GitHub-hoorace-blue.svg?style=flat)](https://github.com/hoorace)
 [![Twitter](https://img.shields.io/badge/twitter-@hoorace-blue.svg?style=flat)](https://twitter.com/hoorace)
-[![Twitter](https://img.shields.io/badge/facebook-@hoorace-blue.svg?style=flat)](https://facebook.com/hoorace)
 [![eMail](https://img.shields.io/badge/email-longtask@gmail.com-blue.svg?style=flat)](mailto:longtask@gmail.com)
 
 Swift-Font-Awesome is an [Font Awesome](http://fontawesome.io/) implementation which written in Swift.
