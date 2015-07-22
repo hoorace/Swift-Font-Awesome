@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Swift-Font-Awesome"
-  s.version      = "1.1.0"
+  s.version      = "1.1.1"
   s.summary      = "Swift-Font-Awesome is an Font Awesome implementation which written in Swift."
 
   s.description  = <<-DESC
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/hoorace/Swift-Font-Awesome.git", :tag => "1.1.0" }
+  s.source       = { :git => "https://github.com/hoorace/Swift-Font-Awesome.git", :tag => "1.1.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

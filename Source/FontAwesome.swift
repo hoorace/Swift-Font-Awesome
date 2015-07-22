@@ -34,7 +34,6 @@ internal class FontAwesome {
             if identifier?.hasPrefix("org.cocoapods") == true {
                 fontURL = bundle.URLForResource(kFontAwesome, withExtension: "ttf", subdirectory: "Swift-Font-Awesome.bundle")!
             } else {
-                
                 fontURL = NSBundle.mainBundle().URLForResource(kFontAwesome, withExtension: "ttf")!
             }
             let inData: NSData = NSData(contentsOfURL: fontURL)!
@@ -43,6 +42,9 @@ internal class FontAwesome {
             var error: Unmanaged<CFError>?
             if !CTFontManagerRegisterGraphicsFont(font, &error) {
                 println("Failed to register font, error: \(error)")
+                let errorDescription: CFStringRef = CFErrorCopyDescription(error!.takeUnretainedValue())
+                let nsError = error!.takeUnretainedValue() as AnyObject as! NSError
+                NSException(name: NSInternalInconsistencyException, reason: errorDescription as String, userInfo: [NSUnderlyingErrorKey: nsError]).raise()
             }
         }
     }

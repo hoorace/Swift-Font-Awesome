@@ -51,7 +51,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'Swift-Font-Awesome', '~> 1.1.0'
+pod 'Swift-Font-Awesome', '~> 1.1.1'
 ```
 
 Then, run the following command:
