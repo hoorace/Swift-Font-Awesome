@@ -10,6 +10,7 @@ import UIKit
 
 public extension UIImage {
     //https://github.com/melvitax/AFImageHelper/blob/master/AF%2BImage%2BHelper/AF%2BImage%2BExtension.swift
+    //image with circle
     public convenience init?(faCircle: Fa, font: UIFont = FaType.LG.font, color: UIColor = UIColor.whiteColor(), circleFont: UIFont = FaType.X4.font,circleColor: UIColor = UIColor.blackColor(), backgroundColor: UIColor = UIColor.grayColor(), size:CGSize = CGSizeMake(64, 64), offset: CGPoint = CGPoint(x: 0, y: 8), circleOffset: CGPoint = CGPoint(x: 0, y: 0))
     {
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
@@ -29,6 +30,30 @@ public extension UIImage {
         self.init(CGImage:UIGraphicsGetImageFromCurrentImageContext().CGImage)
         UIGraphicsEndImageContext()
     }
+    
+    //image with square
+    public convenience init?(faSquare: Fa, font: UIFont = FaType.LG.font, color: UIColor = UIColor.whiteColor(), squareFont: UIFont = FaType.X4.font,squareColor: UIColor = UIColor.blackColor(), backgroundColor: UIColor = UIColor.grayColor(), size:CGSize = CGSizeMake(64, 64), offset: CGPoint = CGPoint(x: 0, y: 8), circleOffset: CGPoint = CGPoint(x: 0, y: 0))
+    {
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        let context = UIGraphicsGetCurrentContext()
+        CGContextSetFillColorWithColor(context, backgroundColor.CGColor)
+        CGContextFillRect(context, CGRect(origin: CGPoint(x: 0, y: 0), size: size))
+        var style = NSMutableParagraphStyle()
+        style.alignment = .Center
+        let attr = [NSFontAttributeName:font, NSForegroundColorAttributeName:color, NSParagraphStyleAttributeName:style]
+        
+        let rect = CGRect(x: circleOffset.x, y: circleOffset.y, width: size.width, height: size.height)
+        let attrCircle = [NSFontAttributeName:squareFont, NSForegroundColorAttributeName:squareColor, NSParagraphStyleAttributeName:style]
+        Fa.SquareO.text!.drawInRect(rect, withAttributes: attrCircle)
+        
+        let rectIn = CGRect(x: offset.x, y: offset.y, width: size.width, height: size.height)
+        faSquare.text!.drawInRect(rectIn, withAttributes: attr)
+        self.init(CGImage:UIGraphicsGetImageFromCurrentImageContext().CGImage)
+        UIGraphicsEndImageContext()
+    }
+    
+    
+    
     
     // MARK: Image with Text
     public convenience init?(fa: Fa, font: UIFont = FaType.LG.font, color: UIColor = UIColor.whiteColor(), backgroundColor: UIColor = UIColor.grayColor(), size:CGSize = CGSizeMake(64, 64), offset: CGPoint = CGPoint(x: 0, y: 0))

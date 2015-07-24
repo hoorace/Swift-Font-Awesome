@@ -68,10 +68,15 @@ class ViewController: UIViewController {
         imageView.image = image
         self.view.addSubview(imageView)
         
-        let image1 = UIImage(fa: Fa.Twitter, font: FaType.X3.font, color: .blueColor(), backgroundColor: .clearColor(), offset: CGPoint(x: 0, y: 8))
-        let imageView1 = UIImageView(frame: CGRectMake(200, 300, 64, 64))
+        let image1 = UIImage(faSquare: Fa.Twitter, font: FaType.X2.font, color: .blueColor(), squareColor: .blueColor(), backgroundColor: .clearColor(), offset: CGPoint(x: 0, y: 15))
+        let imageView1 = UIImageView(frame: CGRectMake(150, 300, 64, 64))
         imageView1.image = image1
         self.view.addSubview(imageView1)
+        
+        let image2 = UIImage(fa: Fa.Twitter, font: FaType.X3.font, color: .blueColor(), backgroundColor: .clearColor(), offset: CGPoint(x: 0, y: 8))
+        let imageView2 = UIImageView(frame: CGRectMake(250, 300, 64, 64))
+        imageView2.image = image2
+        self.view.addSubview(imageView2)
     }
     
     func initNavigation(){
