@@ -8,9 +8,10 @@ Swift-Font-Awesome is an [Font Awesome](http://fontawesome.io/) implementation w
 ## Features
 
 - [x] UILable
-- [x] UIImage or UIImage with circle
+- [x] UIImage or UIImage with circle or UIImage with square
 - [x] UIBarButtonItem
 - [x] UIButton
+- [x] UIFont 
 - [x] All extension can with FontAwesome and it's own text
 
 ## Snapshots
