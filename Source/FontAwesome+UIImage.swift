@@ -13,6 +13,7 @@ public extension UIImage {
     //image with circle
     public convenience init?(faCircle: Fa, font: UIFont = FaType.LG.font, color: UIColor = UIColor.whiteColor(), circleFont: UIFont = FaType.X4.font,circleColor: UIColor = UIColor.blackColor(), backgroundColor: UIColor = UIColor.grayColor(), size:CGSize = CGSizeMake(64, 64), offset: CGPoint = CGPoint(x: 0, y: 8), circleOffset: CGPoint = CGPoint(x: 0, y: 0))
     {
+        FontAwesome.sharedManager.registerFont()
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let context = UIGraphicsGetCurrentContext()
         CGContextSetFillColorWithColor(context, backgroundColor.CGColor)
@@ -34,6 +35,7 @@ public extension UIImage {
     //image with square
     public convenience init?(faSquare: Fa, font: UIFont = FaType.LG.font, color: UIColor = UIColor.whiteColor(), squareFont: UIFont = FaType.X4.font,squareColor: UIColor = UIColor.blackColor(), backgroundColor: UIColor = UIColor.grayColor(), size:CGSize = CGSizeMake(64, 64), offset: CGPoint = CGPoint(x: 0, y: 8), circleOffset: CGPoint = CGPoint(x: 0, y: 0))
     {
+        FontAwesome.sharedManager.registerFont()
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let context = UIGraphicsGetCurrentContext()
         CGContextSetFillColorWithColor(context, backgroundColor.CGColor)
@@ -58,6 +60,7 @@ public extension UIImage {
     // MARK: Image with Text
     public convenience init?(fa: Fa, font: UIFont = FaType.LG.font, color: UIColor = UIColor.whiteColor(), backgroundColor: UIColor = UIColor.grayColor(), size:CGSize = CGSizeMake(64, 64), offset: CGPoint = CGPoint(x: 0, y: 0))
     {
+        FontAwesome.sharedManager.registerFont()
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let context = UIGraphicsGetCurrentContext()
         CGContextSetFillColorWithColor(context, backgroundColor.CGColor)

@@ -54,6 +54,7 @@ internal class FontAwesome {
 
 public enum FaType: Int{
     public var font: UIFont {
+        FontAwesome.sharedManager.registerFont()
         return fontByType(self)
     }
     private func fontByType(type: FaType) -> UIFont {
