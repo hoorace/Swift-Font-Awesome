@@ -11,44 +11,52 @@ import UIKit
 public extension UIImage {
     //https://github.com/melvitax/AFImageHelper/blob/master/AF%2BImage%2BHelper/AF%2BImage%2BExtension.swift
     //image with circle
-    public convenience init?(faCircle: Fa, font: UIFont = FaType.LG.font, color: UIColor = UIColor.whiteColor(), circleFont: UIFont = FaType.X4.font,circleColor: UIColor = UIColor.blackColor(), backgroundColor: UIColor = UIColor.grayColor(), size:CGSize = CGSizeMake(64, 64), offset: CGPoint = CGPoint(x: 0, y: 8), circleOffset: CGPoint = CGPoint(x: 0, y: 0))
+    public convenience init?(faCircle: Fa, imageSize: CGFloat, color: UIColor = UIColor.whiteColor(),circleColor: UIColor = UIColor.grayColor(), backgroundColor: UIColor = UIColor.clearColor(), radius: CGFloat = 5)
     {
         FontAwesome.sharedManager.registerFont()
+        let fontSize = imageSize - 2 * radius
+        let font: UIFont = UIFont(name: kFontAwesome, size: fontSize)!
+        let size = CGSizeMake(fontSize + 2 * radius, fontSize + 2 * radius) // circle size
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let context = UIGraphicsGetCurrentContext()
+        CGContextSetAllowsAntialiasing(context, true)
         CGContextSetFillColorWithColor(context, backgroundColor.CGColor)
         CGContextFillRect(context, CGRect(origin: CGPoint(x: 0, y: 0), size: size))
         var style = NSMutableParagraphStyle()
         style.alignment = .Center
-        let attr = [NSFontAttributeName:font, NSForegroundColorAttributeName:color, NSParagraphStyleAttributeName:style]
         
-        let rect = CGRect(x: circleOffset.x, y: circleOffset.y, width: size.width, height: size.height)
-        let attrCircle = [NSFontAttributeName:circleFont, NSForegroundColorAttributeName:circleColor, NSParagraphStyleAttributeName:style]
+        let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        let attrCircle = [NSFontAttributeName: UIFont(name: kFontAwesome, size: size.width)!, NSForegroundColorAttributeName:circleColor, NSParagraphStyleAttributeName:style]
         Fa.Circle.text!.drawInRect(rect, withAttributes: attrCircle)
         
-        let rectIn = CGRect(x: offset.x, y: offset.y, width: size.width, height: size.height)
+        let rectIn = CGRect(x: radius, y: radius, width: fontSize + 2, height: fontSize + 2)
+        let attr = [NSFontAttributeName: font, NSForegroundColorAttributeName:color, NSParagraphStyleAttributeName:style]
         faCircle.text!.drawInRect(rectIn, withAttributes: attr)
         self.init(CGImage:UIGraphicsGetImageFromCurrentImageContext().CGImage)
         UIGraphicsEndImageContext()
     }
     
     //image with square
-    public convenience init?(faSquare: Fa, font: UIFont = FaType.LG.font, color: UIColor = UIColor.whiteColor(), squareFont: UIFont = FaType.X4.font,squareColor: UIColor = UIColor.blackColor(), backgroundColor: UIColor = UIColor.grayColor(), size:CGSize = CGSizeMake(64, 64), offset: CGPoint = CGPoint(x: 0, y: 8), circleOffset: CGPoint = CGPoint(x: 0, y: 0))
+    public convenience init?(faSquare: Fa, imageSize: CGFloat, color: UIColor = UIColor.whiteColor(),circleColor: UIColor = UIColor.grayColor(), backgroundColor: UIColor = UIColor.clearColor(), radius: CGFloat = 8)
     {
         FontAwesome.sharedManager.registerFont()
+        let fontSize = imageSize - 2 * radius
+        let font: UIFont = UIFont(name: kFontAwesome, size: fontSize)!
+        let size = CGSizeMake(fontSize + 2 * radius, fontSize + 2 * radius) // circle size
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let context = UIGraphicsGetCurrentContext()
+        CGContextSetAllowsAntialiasing(context, true)
         CGContextSetFillColorWithColor(context, backgroundColor.CGColor)
         CGContextFillRect(context, CGRect(origin: CGPoint(x: 0, y: 0), size: size))
         var style = NSMutableParagraphStyle()
         style.alignment = .Center
-        let attr = [NSFontAttributeName:font, NSForegroundColorAttributeName:color, NSParagraphStyleAttributeName:style]
         
-        let rect = CGRect(x: circleOffset.x, y: circleOffset.y, width: size.width, height: size.height)
-        let attrCircle = [NSFontAttributeName:squareFont, NSForegroundColorAttributeName:squareColor, NSParagraphStyleAttributeName:style]
+        let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        let attrCircle = [NSFontAttributeName: UIFont(name: kFontAwesome, size: size.width)!, NSForegroundColorAttributeName:circleColor, NSParagraphStyleAttributeName:style]
         Fa.SquareO.text!.drawInRect(rect, withAttributes: attrCircle)
         
-        let rectIn = CGRect(x: offset.x, y: offset.y, width: size.width, height: size.height)
+        let rectIn = CGRect(x: radius, y: radius, width: fontSize + 2, height: fontSize + 2)
+        let attr = [NSFontAttributeName: font, NSForegroundColorAttributeName:color, NSParagraphStyleAttributeName:style]
         faSquare.text!.drawInRect(rectIn, withAttributes: attr)
         self.init(CGImage:UIGraphicsGetImageFromCurrentImageContext().CGImage)
         UIGraphicsEndImageContext()
@@ -58,18 +66,22 @@ public extension UIImage {
     
     
     // MARK: Image with Text
-    public convenience init?(fa: Fa, font: UIFont = FaType.LG.font, color: UIColor = UIColor.whiteColor(), backgroundColor: UIColor = UIColor.grayColor(), size:CGSize = CGSizeMake(64, 64), offset: CGPoint = CGPoint(x: 0, y: 0))
+    public convenience init?(fa: Fa, imageSize: CGFloat, color: UIColor = UIColor.whiteColor(), backgroundColor: UIColor = UIColor.grayColor())
     {
         FontAwesome.sharedManager.registerFont()
+        let font: UIFont = UIFont(name: kFontAwesome, size: imageSize - 2)!
+        let size = CGSizeMake(imageSize, imageSize) // circle size
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let context = UIGraphicsGetCurrentContext()
+        CGContextSetAllowsAntialiasing(context, true)
         CGContextSetFillColorWithColor(context, backgroundColor.CGColor)
         CGContextFillRect(context, CGRect(origin: CGPoint(x: 0, y: 0), size: size))
         var style = NSMutableParagraphStyle()
         style.alignment = .Center
-        let attr = [NSFontAttributeName:font, NSForegroundColorAttributeName:color, NSParagraphStyleAttributeName:style]
-        let rect = CGRect(x: offset.x, y: offset.y, width: size.width, height: size.height)
-        fa.text!.drawInRect(rect, withAttributes: attr)
+        
+        let rectIn = CGRect(x: 0, y: 0, width: imageSize, height: imageSize)
+        let attr = [NSFontAttributeName: font, NSForegroundColorAttributeName:color, NSParagraphStyleAttributeName:style]
+        fa.text!.drawInRect(rectIn, withAttributes: attr)
         self.init(CGImage:UIGraphicsGetImageFromCurrentImageContext().CGImage)
         UIGraphicsEndImageContext()
     }

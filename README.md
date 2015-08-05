@@ -99,11 +99,11 @@ rightButton.fa = Fa.Bars
 
 image with circle:
 ```swift
-let image = UIImage(faCircle: Fa.Twitter, font: FaType.X3.font, backgroundColor: .clearColor())
+let image = UIImage(faCircle: Fa.Twitter, imageSize: 48, color: .whiteColor(), circleColor: .orangeColor(), backgroundColor: .clearColor())
 ```
 image without circle:
 ```swift
-let image = UIImage(fa: Fa.Twitter, font: FaType.X3.font, color: .blueColor(), backgroundColor: .clearColor(), offset: CGPoint(x: 0, y: 8))
+let image = UIImage(fa: Fa.Twitter , imageSize: 48, color: .blueColor(), backgroundColor: .clearColor())
 ```
 
 ## FAQ

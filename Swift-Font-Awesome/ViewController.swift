@@ -63,17 +63,17 @@ class ViewController: UIViewController {
     }
     
     func initImage(){
-        let image = UIImage(faCircle: Fa.Twitter, font: FaType.X3.font, backgroundColor: .clearColor())
+        let image = UIImage(faCircle: Fa.Twitter, imageSize: 48, color: .whiteColor(), circleColor: .orangeColor(), backgroundColor: .clearColor())
         let imageView = UIImageView(frame: CGRectMake(50, 300, 64, 64))
         imageView.image = image
         self.view.addSubview(imageView)
         
-        let image1 = UIImage(faSquare: Fa.Twitter, font: FaType.X2.font, color: .blueColor(), squareColor: .blueColor(), backgroundColor: .clearColor(), offset: CGPoint(x: 0, y: 15))
+        let image1 = UIImage(faSquare: Fa.Twitter, imageSize: 48, color: .orangeColor(), circleColor: .orangeColor(), backgroundColor: .clearColor())
         let imageView1 = UIImageView(frame: CGRectMake(150, 300, 64, 64))
         imageView1.image = image1
         self.view.addSubview(imageView1)
         
-        let image2 = UIImage(fa: Fa.Twitter, font: FaType.X3.font, color: .blueColor(), backgroundColor: .clearColor(), offset: CGPoint(x: 0, y: 8))
+        let image2 = UIImage(fa: Fa.Twitter , imageSize: 48, color: .blueColor(), backgroundColor: .clearColor())
         let imageView2 = UIImageView(frame: CGRectMake(250, 300, 64, 64))
         imageView2.image = image2
         self.view.addSubview(imageView2)
