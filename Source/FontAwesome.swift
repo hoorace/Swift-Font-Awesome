@@ -34,14 +34,14 @@ internal class FontAwesome {
             if identifier?.hasPrefix("org.cocoapods") == true {
                 fontURL = bundle.URLForResource(kFontAwesome, withExtension: "ttf", subdirectory: "Swift-Font-Awesome.bundle")!
             } else {
-                fontURL = NSBundle.mainBundle().URLForResource(kFontAwesome, withExtension: "ttf")!
+                fontURL = bundle.URLForResource(kFontAwesome, withExtension: "ttf")!
             }
             let inData: NSData = NSData(contentsOfURL: fontURL)!
-            let provider: CGDataProviderRef = CGDataProviderCreateWithCFData(inData)
-            let font: CGFontRef = CGFontCreateWithDataProvider(provider)
+            let provider: CGDataProviderRef = CGDataProviderCreateWithCFData(inData)!
+            let font: CGFontRef = CGFontCreateWithDataProvider(provider)!
             var error: Unmanaged<CFError>?
             if !CTFontManagerRegisterGraphicsFont(font, &error) {
-                println("Failed to register font, error: \(error)")
+                print("Failed to register font, error: \(error)")
                 let errorDescription: CFStringRef = CFErrorCopyDescription(error!.takeUnretainedValue())
                 let nsError = error!.takeUnretainedValue() as AnyObject as! NSError
                 NSException(name: NSInternalInconsistencyException, reason: errorDescription as String, userInfo: [NSUnderlyingErrorKey: nsError]).raise()
@@ -71,8 +71,6 @@ public enum FaType: Int{
             return UIFont(name: kFontAwesome, size: 64.0)!
         case .X5:
             return UIFont(name: kFontAwesome, size: 80.0)!
-        default:
-            return UIFont(name: kFontAwesome, size: 16.0)!
         }
     }
     case LG, X1, X2, X3, X4, X5

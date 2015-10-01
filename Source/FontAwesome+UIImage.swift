@@ -22,7 +22,7 @@ public extension UIImage {
         CGContextSetAllowsAntialiasing(context, true)
         CGContextSetFillColorWithColor(context, backgroundColor.CGColor)
         CGContextFillRect(context, CGRect(origin: CGPoint(x: 0, y: 0), size: size))
-        var style = NSMutableParagraphStyle()
+        let style = NSMutableParagraphStyle()
         style.alignment = .Center
         
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
@@ -32,7 +32,7 @@ public extension UIImage {
         let rectIn = CGRect(x: radius, y: radius, width: fontSize + 2, height: fontSize + 2)
         let attr = [NSFontAttributeName: font, NSForegroundColorAttributeName:color, NSParagraphStyleAttributeName:style]
         faCircle.text!.drawInRect(rectIn, withAttributes: attr)
-        self.init(CGImage:UIGraphicsGetImageFromCurrentImageContext().CGImage)
+        self.init(CGImage:UIGraphicsGetImageFromCurrentImageContext().CGImage!)
         UIGraphicsEndImageContext()
     }
     
@@ -48,7 +48,7 @@ public extension UIImage {
         CGContextSetAllowsAntialiasing(context, true)
         CGContextSetFillColorWithColor(context, backgroundColor.CGColor)
         CGContextFillRect(context, CGRect(origin: CGPoint(x: 0, y: 0), size: size))
-        var style = NSMutableParagraphStyle()
+        let style = NSMutableParagraphStyle()
         style.alignment = .Center
         
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
@@ -58,7 +58,7 @@ public extension UIImage {
         let rectIn = CGRect(x: radius, y: radius, width: fontSize + 2, height: fontSize + 2)
         let attr = [NSFontAttributeName: font, NSForegroundColorAttributeName:color, NSParagraphStyleAttributeName:style]
         faSquare.text!.drawInRect(rectIn, withAttributes: attr)
-        self.init(CGImage:UIGraphicsGetImageFromCurrentImageContext().CGImage)
+        self.init(CGImage:UIGraphicsGetImageFromCurrentImageContext().CGImage!)
         UIGraphicsEndImageContext()
     }
     
@@ -76,13 +76,13 @@ public extension UIImage {
         CGContextSetAllowsAntialiasing(context, true)
         CGContextSetFillColorWithColor(context, backgroundColor.CGColor)
         CGContextFillRect(context, CGRect(origin: CGPoint(x: 0, y: 0), size: size))
-        var style = NSMutableParagraphStyle()
+        let style = NSMutableParagraphStyle()
         style.alignment = .Center
         
         let rectIn = CGRect(x: 0, y: 0, width: imageSize, height: imageSize)
         let attr = [NSFontAttributeName: font, NSForegroundColorAttributeName:color, NSParagraphStyleAttributeName:style]
         fa.text!.drawInRect(rectIn, withAttributes: attr)
-        self.init(CGImage:UIGraphicsGetImageFromCurrentImageContext().CGImage)
+        self.init(CGImage:UIGraphicsGetImageFromCurrentImageContext().CGImage!)
         UIGraphicsEndImageContext()
     }
     

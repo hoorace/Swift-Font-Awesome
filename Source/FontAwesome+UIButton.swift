@@ -22,8 +22,6 @@ public extension UIButton {
                 case .Right:
                     setTitle(txt + fa.text!, forState: state)
                     break
-                default:
-                    setTitle(fa.text! + txt, forState: state)
                 }
             }
         }else{

@@ -13,8 +13,7 @@ public extension UILabel {
         get {
             if let txt = text {
                 //only support FaTextAlignment.Left
-                var indexTo = advance(txt.startIndex, 1)
-                if let index =  find(FontContentArray, txt.substringToIndex(indexTo)) {
+                if let index =  FontContentArray.indexOf(txt.substringToIndex(txt.startIndex.advancedBy(1))) {
                     return Fa(rawValue: index)!
                 }
             }
@@ -24,7 +23,7 @@ public extension UILabel {
         set {
             if let value = newValue {
                 FontAwesome.sharedManager.registerFont()
-                font = UIFont.fa(size: self.font.pointSize)
+                font = UIFont.fa(self.font.pointSize)
                 if let txt = text {
                     if let align = faTextAlignment {
                         switch align {
@@ -34,8 +33,6 @@ public extension UILabel {
                         case .Right:
                             text = txt + value.text!
                             break
-                        default:
-                            text = value.text! + txt
                         }
                     }
                 }else{

@@ -11,10 +11,9 @@ import UIKit
 public extension UIBarButtonItem {
     public var fa: Fa? {
         get {
-            if let txt = self.title {
+            if let txt: String = self.title {
                 //only support FaTextAlignment.Left
-                var indexTo = advance(txt.startIndex, 1)
-                if let index =  find(FontContentArray, txt.substringToIndex(indexTo)) {
+                if let index =  FontContentArray.indexOf(txt.substringFromIndex(txt.startIndex.advancedBy(1))) {
                     return Fa(rawValue: index)!
                 }
             }
@@ -35,8 +34,6 @@ public extension UIBarButtonItem {
                         case .Right:
                             self.title = txt + value.text!
                             break
-                        default:
-                            self.title = value.text! + txt
                         }
                     }
                 }else{
