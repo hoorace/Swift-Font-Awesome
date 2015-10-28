@@ -105,7 +105,7 @@ class ViewController: UIViewController {
             self.view.backgroundColor = UIColor.orangeColor()
             
         default:
-            println("")
+            print("")
         }
     }
 
