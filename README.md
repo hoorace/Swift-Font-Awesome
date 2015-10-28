@@ -3,7 +3,7 @@
 [![Twitter](https://img.shields.io/badge/twitter-@hoorace-blue.svg?style=flat)](https://twitter.com/hoorace)
 [![eMail](https://img.shields.io/badge/email-longtask@gmail.com-blue.svg?style=flat)](mailto:longtask@gmail.com)
 
-Swift-Font-Awesome is an [Font Awesome](http://fontawesome.io/) implementation which written in Swift.
+Swift-Font-Awesome is an [Font Awesome](http://fontawesome.io/) implementation which written in Swift2.0. and support Font Awesome version 4.4.
 
 ## Features
 
