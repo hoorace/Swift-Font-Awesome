@@ -33,7 +33,7 @@ Swift-Font-Awesome is an [Font Awesome](http://fontawesome.io/) implementation w
 
 copy "Source" floder files to you porject.
 
-### CocoaPods
+<!--### CocoaPods
 
 [CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects.
 
@@ -62,7 +62,7 @@ And, in your porject , don't forget import like this:
 ```swift
 import Swift_Font_Awesome
 ```
-
+-->
 
 ## Usage
 
