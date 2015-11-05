@@ -15,13 +15,12 @@ let kFontAwesome = "fontawesome"
 internal var align: FaTextAlignment?
 
 internal class FontAwesome {
-    class var sharedManager : FontAwesome {
-        struct Static {
-            static let sharedInstance : FontAwesome = FontAwesome()
-        }
-        
-        return Static.sharedInstance
-    }
+    
+    static let sharedManager: FontAwesome = {
+        let instance = FontAwesome()
+        // setup code
+        return instance
+    }()
     
     var token: dispatch_once_t = 0
     
