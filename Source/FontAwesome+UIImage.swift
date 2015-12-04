@@ -29,7 +29,7 @@ public extension UIImage {
         let attrCircle = [NSFontAttributeName: UIFont(name: kFontAwesome, size: size.width)!, NSForegroundColorAttributeName:circleColor, NSParagraphStyleAttributeName:style]
         Fa.Circle.text!.drawInRect(rect, withAttributes: attrCircle)
         
-        let rectIn = CGRect(x: radius, y: radius, width: fontSize + 2, height: fontSize + 2)
+        let rectIn = CGRect(x: radius - 1, y: radius, width: fontSize + 2, height: fontSize + 2)
         let attr = [NSFontAttributeName: font, NSForegroundColorAttributeName:color, NSParagraphStyleAttributeName:style]
         faCircle.text!.drawInRect(rectIn, withAttributes: attr)
         self.init(CGImage:UIGraphicsGetImageFromCurrentImageContext().CGImage!)

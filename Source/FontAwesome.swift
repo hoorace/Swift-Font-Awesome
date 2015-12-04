@@ -1,7 +1,7 @@
 //
 //  FontAwesome.swift
 //  Swift-Font-Awesome
-//  from http://fontawesome.io/  and version 4.3.0
+//  from http://fontawesome.io/  and version 4.4.0
 //
 //  Created by longhao on 15/7/7.
 //  Copyright (c) 2015年 longhao. All rights reserved.

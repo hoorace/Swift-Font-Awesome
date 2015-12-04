@@ -9,9 +9,9 @@
 import UIKit
 
 public extension UIButton {
-    public func fa(fa: Fa, forState state: UIControlState){
+    public func fa(fa: Fa, adjustSize: CGFloat = 0, forState state: UIControlState){
         FontAwesome.sharedManager.registerFont()
-        let fontAwesome = UIFont(name: kFontAwesome, size: self.titleLabel!.font.pointSize)
+        let fontAwesome = UIFont(name: kFontAwesome, size: self.titleLabel!.font.pointSize + adjustSize)
         titleLabel!.font = fontAwesome!
         if let txt = titleLabel!.text {
             if let align = faTextAlignment {
